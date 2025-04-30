@@ -1,9 +1,10 @@
-Make your own posts visible on profile
-Make feed visible with other peoples content
 Allow for follow and unfollow
-Allow for seeing others profiles
+Edit Post
+Delete Post
+Search Bar
 Try to add more of the // explanations to myself to remember what each thing is connected to 
 Style all pages
+
 
 Finished (until something breaks again):
 
@@ -12,3 +13,5 @@ Register
 Edit profile
 Api Key + Token (headers.js)
 Create Post
+Post visibility - feed + profile page + separete post page
+Profile viewing

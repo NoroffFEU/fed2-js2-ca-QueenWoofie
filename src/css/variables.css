@@ -1,0 +1,19 @@
+:root {
+    /* 2025 Formula One Livery Colors */
+    --color-ferrari: #e80020;
+    --color-williams: #64c4ff;
+    --color-alpine: #0093cc;
+    --color-astonmartin: #229971;
+    --color-haas: #B6BABD;
+    --color-kicksauber: #52E252;
+    --color-mclaren: #FF8000;
+    --color-mercedes: #27F4D2;
+    --color-racingbulls: #6692FF;
+    --color-redbull: #3671C6;
+    --color-ln4: #e8ff00;
+
+    /* Non-Color Elements */
+    --border-radius: 6px;
+    --shadow-light: 0 2px 6px rgba(0, 0, 0, 0.05);
+    --transition-fast: 0.3s ease;
+}
