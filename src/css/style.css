@@ -586,3 +586,21 @@ footer {
     font-weight: bold;
     color: var(--color-tire);
   }
+
+  @media (max-width: 768px) {
+    #popup-content {
+      width: 80%;
+  }
+  
+  #update-profile input {
+    width: 80%;
+  }
+
+  #user-feed {
+    width: 80%;
+  }
+
+  #search-form, #login-form, #register-form {
+    width: 80%;
+  }
+}
