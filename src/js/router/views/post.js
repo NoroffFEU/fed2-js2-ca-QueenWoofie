@@ -17,6 +17,7 @@ if (!postId) {
 // Get single post
 try {
     const { data: post } = await readPost(postId);
+    console.log("Post data:", post);
 
     const createdAt = new Date(post.created).toLocaleString();
 
