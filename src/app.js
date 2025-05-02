@@ -11,3 +11,4 @@ document.querySelector("footer").innerHTML = pageFooter();
 setLogoutListener();
 
 await router(window.location.pathname);
+console.log("Path:", window.location.pathname); // Figuring out the single post issue
