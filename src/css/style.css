@@ -1,1 +1,248 @@
 @import url(_reset.css);
+@import url(variables.css);
+
+* { 
+  font-family: "Dosis", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+}
+
+/* HEADER */
+
+header {
+  background: var(--checkered-flag);
+  min-height: 2%;
+  height: fit-content;
+  border-bottom: solid 2px var(--color-ferrari);
+  width: 100%;
+}
+
+header ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 10%;
+}
+
+header ul li {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  text-align: center;
+  flex-wrap: wrap;
+  background: var(--color-tire);
+  border: 5px solid var(--color-ferrari);
+  border-radius: 100%;
+  height: 60px;
+  width: 60px;
+  transition: border var(--transition-fast);
+}
+
+header a, header button {
+  background: none;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--color-light);
+  text-decoration: none;
+  font-size: 16px;
+  border-radius: 100%;
+  height: 60px;
+  width: 60px;
+  transition: background-color var(--transition-fast), color var(--transition-fast);
+}
+
+header li:hover {
+  cursor: pointer;
+  border: 5px solid var(--color-ln4);
+}
+
+header a:hover, header button:hover {
+  color: var(--color-tire);
+  background: var(--color-light);
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
+}
+
+header .title {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin: 0;
+  padding: 2px 2%;
+  height: fit-content;
+  background: var(--color-williams);
+  color: var(--color-tire);
+  border-bottom: solid 2px var(--color-alpine);
+}
+
+header h1 {
+  margin: 0;
+  font-weight: bold;
+}
+
+header img {
+  height: 30px;
+  width: auto;
+  margin: 2px 0;
+}
+
+/* MAIN */
+
+main {
+  border-top: solid 2px var(--color-ferrari);
+  margin-top: 2px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 5%;
+  background: var(--tint-williams);
+}
+
+main a {
+  text-decoration: none;
+}
+
+main #feed {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-main);
+}
+
+main .post {
+  background-color: var(--color-williams);
+  padding: 1% 4%;
+  border-radius: var(--border-radius);
+  border: var(--border-fullside);
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.post h2 {
+  width: fit-content;
+  margin-right: var(--gap-main);
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
+.post p {
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
+.author {
+  width: fit-content;
+}
+
+.date {
+  width: 100%;
+}
+
+.body-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.post-body {
+  width: 100%;
+}
+
+.post a {
+  color: var(--color-tire);
+  font-weight: 400;
+  transition: color var(--transition-fast), font-weight var(--transition-fast);
+}
+
+.post a:hover {
+  color: var(--color-mclaren);
+  font-weight: bold;
+}
+
+.tags {
+  width: 100%;
+  border: solid 2px 0 var(--color-ferrari);
+}
+
+.editbutton {
+  border: var(--border-fullside);
+  padding: 10px;
+  border-radius: var(--border-radius);
+}
+
+#feed img {
+  border-radius: var(--border-radius);
+  border: var(--border-fullside);
+  max-height: 400px;
+  max-width: 400px;
+  height: auto;
+  width: auto;
+  margin-right: var(--gap-main);
+}
+
+#load-more {
+  margin: 2%;
+  font-size: 1rem;
+  background: var(--color-williams);
+  border: var(--border-fullside);
+  border-radius: var(--border-radius);
+  padding: 2px 10px;
+  transition: background-color var(--transition-fast), border var(--transition-fast), font-weight var(--transition-fast);
+}
+
+#load-more:hover {
+  cursor: pointer;
+  background: var(--color-mclaren);
+  border: 2px solid var(--tint-williams);
+  font-weight: bold;
+}
+
+/* FOOTER */
+
+footer {
+  border-top: solid 2px var(--color-ferrari);
+  height: fit-content;
+  padding: 5px 0;
+  text-align: center;
+}
+
+  /* ALERT - ERROR / SUCCESS */
+
+  .alert-box {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    z-index: 1000;
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+    display: none;
+  }
+  
+  .alert-box.success {
+    background-color: var(--color-ln4);
+    color: var(--color-tire);
+  }
+  
+  .alert-box.error {
+    background-color: var(--color-ferrari);
+  }
