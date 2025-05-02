@@ -611,4 +611,11 @@ footer {
   .body-container {
     flex-direction: column;
   }
+  
+  main img {
+    max-width: 90%;
+    max-height: 90%;
+    height: fit-content;
+    width: fit-content;
+  }
 }
