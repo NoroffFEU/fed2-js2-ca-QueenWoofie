@@ -10,5 +10,5 @@ document.querySelector("header").innerHTML = navHeader();
 document.querySelector("footer").innerHTML = pageFooter();
 setLogoutListener();
 
-await router(window.location.pathname);
+await router(window.location.pathname + window.location.search);
 console.log("Path:", window.location.pathname); // Figuring out the single post issue
