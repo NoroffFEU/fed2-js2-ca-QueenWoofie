@@ -8,7 +8,7 @@ export function renderPosts(posts = []) {
                 const createdAt = new Date(post.created).toLocaleString();
                 return `
                     <div class="post">
-                        <h2><a href="/post/?id=${post.id}">${post.title}</a></h2> <!-- 🛠 clickable title -->
+                        <h2><a href="/post/?id=${post.id}">${post.title}</a></h2>
                         <p class="author"><strong>By:</strong> <a href="/profile/?user=${post.author.name}">${post.author.name}</a></p>
                         <p class="date"><small>Posted on: ${createdAt}</small></p>
                         <div class="body-container">
