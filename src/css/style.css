@@ -504,50 +504,8 @@ footer {
     color: var(--color-tire)!important;
   }
   
+  /* SEARCH */ 
 
+  /* LOGIN / REGISTER */
 
-
-  .body-container {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .post-body {
-    width: 100%;
-  }
-  
-  .post a {
-    color: var(--color-tire);
-    font-weight: 400;
-    transition: color var(--transition-fast), font-weight var(--transition-fast);
-  }
-  
-  .post a:hover {
-    color: var(--color-mclaren);
-    font-weight: bold;
-  }
-  
-  .tags {
-    width: 100%;
-    border: solid 2px 0 var(--color-ferrari);
-  }
-  
-  .editbutton {
-    border: var(--border-fullside);
-    padding: 10px;
-    border-radius: var(--border-radius);
-  }
-  
-  #feed img {
-    border-radius: var(--border-radius);
-    border: var(--border-fullside);
-    max-height: 400px;
-    max-width: 400px;
-    height: auto;
-    width: auto;
-    margin-right: var(--gap-main);
-  }
-  
+  /* 404 */
