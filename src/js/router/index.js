@@ -2,6 +2,8 @@
 // In order to add additional pages, you will need to implement them below
 // You may change the behaviour or approach of this file if you choose
 export default async function router(pathname = window.location.pathname) {
+  pathname = pathname.endsWith("/") ? pathname : pathname + "/";
+  
   switch (pathname) {
     case "/":
       await import("./views/home.js");
@@ -38,7 +40,7 @@ export default async function router(pathname = window.location.pathname) {
     case "/profile/":
       await import("./views/profile.js");
       break;
-      
+
     default:
       await import("./views/notFound.js");
   }

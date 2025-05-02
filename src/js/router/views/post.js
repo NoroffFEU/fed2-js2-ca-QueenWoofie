@@ -5,6 +5,8 @@ import { showAlert } from "../../utilities/alertDisplay.js";
 
 authGuard();
 
+console.log("post.js is loaded");
+
 const main = document.querySelector("main");
 const query = new URLSearchParams(window.location.search);
 const postId = query.get("id");
