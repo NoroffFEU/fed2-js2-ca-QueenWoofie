@@ -420,6 +420,7 @@ footer {
 
   #user-feed {
     width: 600px;
+    gap: var(--gap-main);
   }
 
   #user-feed img {
