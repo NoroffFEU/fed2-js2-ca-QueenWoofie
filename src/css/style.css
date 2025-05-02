@@ -612,10 +612,15 @@ footer {
     flex-direction: column;
   }
   
-  main img {
+  main img, .single-post {
     max-width: 90%;
     max-height: 90%;
     height: fit-content;
     width: fit-content;
+  }
+
+  main {
+    padding: 0 2px;
+    min-height: 80vh;
   }
 }
