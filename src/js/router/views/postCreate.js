@@ -41,6 +41,7 @@ document.getElementById("create-post").addEventListener("submit", async (event) 
   console.log("Post data being sent:", postData);
 
   try {
+    await createPost(postData);
     showAlert("Post created successfully!", "success");
     setTimeout(() => {
       window.location.href = "/";
