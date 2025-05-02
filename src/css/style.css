@@ -346,7 +346,7 @@ footer {
     margin-bottom: var(--gap-main);
   }
 
-  #followers-button, #following-button, #close-popup, #logout {
+  #followers-button, #following-button, #close-popup, #logout, #follow-button {
     font-size: 1rem;
     background: var(--color-williams);
     border: var(--border-fullside);
@@ -357,7 +357,7 @@ footer {
     margin-bottom: var(--gap-main);
   }
 
-  #followers-button:hover, #following-button:hover, #close-popup:hover, #logout:hover {
+  #followers-button:hover, #following-button:hover, #close-popup:hover, #logout:hover, #follow-button:hover {
     cursor: pointer;
     background: var(--color-mclaren);
     border: 2px solid var(--color-mclaren);
@@ -602,5 +602,9 @@ footer {
 
   #search-form, #login-form, #register-form {
     width: 80%;
+  }
+  
+  .body-container {
+    flex-direction: column;
   }
 }
