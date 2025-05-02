@@ -419,8 +419,10 @@ footer {
   }
 
   #user-feed {
+    display: flex!important;
+    flex-direction: column;
     width: 600px;
-    gap: var(--gap-main)!important;
+    gap: var(--gap-main);
   }
 
   #user-feed img {
