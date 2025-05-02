@@ -41,13 +41,19 @@ try {
 
     main.innerHTML = `
         <h1>${profile.name}'s Profile</h1>
-        <img src="${banner}" alt="Banner" style="width: 100%; height: auto; max-height: 200px; max-width: 600px; border-radius: 8px; margin-bottom: 1rem;" />
-        <img src="${avatar}" alt="Avatar" width="100" style="border-radius: 50%;" />
-        <p>${profile.bio}</p>
-        <p>Email: ${profile.email}</p>
+        <div class="profile-header">
+            <img class="banner" src="${banner}" alt="Banner" style="width: 100%; height: auto; max-height: 200px; max-width: 600px; border-radius: 8px; margin-bottom: 1rem;" />
+            <img class="avatar" src="${avatar}" alt="Avatar" width="100" style="border-radius: 50%;" />
+        </div>
+        <div class="profile-body">
+            <p class="profile-bio">${profile.bio}</p>
+            <p class="profile-email">Email: ${profile.email}</p>
+        </div>
 
-        <button id="followers-button">Followers (${profile.followers.length})</button>
-        <button id="following-button">Following (${profile.following.length})</button>
+        <div class="profile-buttons">
+            <button id="followers-button">Followers (${profile.followers.length})</button>
+            <button id="following-button">Following (${profile.following.length})</button>
+        </div>
         <div id="popup-container" style="display:none;">
             <button id="close-popup">Close</button>
             <div id="popup-content"></div>

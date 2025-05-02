@@ -21,25 +21,29 @@ try {
     const createdAt = new Date(post.created).toLocaleString();
 
     main.innerHTML = `
-        <h1>${post.title}</h1>
-        <p class="author"><strong>By:</strong> <a href="/profile/?user=${post.author.name}">${post.author.name}</a></p>
-        <p class="date"><small>Posted on: ${createdAt}</small></p>
-        <div class="body-container">
-            ${post.media?.url ? `<img src="${post.media.url}" alt="Post media"/>` : ""}
-            <p class="post-body">${post.body}</p>
-        </div>
-        ${post.tags.length ? `
-        <p class="tags"><strong>Tags:</strong> 
-            ${post.tags.map(tag => `<a href="/?tag=${encodeURIComponent(tag)}">#${tag}</a>`).join(", ")}
-        </p>
-        ` : ""}
-        ${post.author.name === localStorage.getItem("profileName") ? `
-            <p>
-                <a class="editbutton" href="/post/edit/?id=${post.id}">✎ Edit</a>
-                <button id="delete-post">🗑️ Delete</button>
+        <div class="single-post">
+            <div class="single-post-header">
+                <h1>${post.title}</h1>
+                <p class="author"><strong>By:</strong> <a href="/profile/?user=${post.author.name}">${post.author.name}</a></p>
+            </div>
+            <p class="date"><small>Posted on: ${createdAt}</small></p>
+            <div class="single-body-container">
+                ${post.media?.url ? `<img src="${post.media.url}" alt="Post media"/>` : ""}
+                <p class="post-body">${post.body}</p>
+            </div>
+            ${post.tags.length ? `
+            <p class="tags"><strong>Tags:</strong> 
+                ${post.tags.map(tag => `<a href="/?tag=${encodeURIComponent(tag)}">#${tag}</a>`).join(", ")}
             </p>
-        ` : ""}
-        <button onclick="window.history.back()">Back</button> <!-- Back button -->
+            ` : ""}
+            ${post.author.name === localStorage.getItem("profileName") ? `
+                <p class="post-buttons">
+                    <a class="single-editbutton" href="/post/edit/?id=${post.id}">✎ Edit</a>
+                    <button id="delete-post">🗑️ Delete</button>
+                </p>
+            </div>
+            ` : ""}
+            <button class="back-button" onclick="window.history.back()">Back</button>
     `;
     // Delete post
     if (post.author.name === localStorage.getItem("profileName")) {

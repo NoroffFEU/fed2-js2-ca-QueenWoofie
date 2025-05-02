@@ -18,7 +18,7 @@ body {
 
 header {
   background: var(--checkered-flag);
-  min-height: 2%;
+  min-height: 10vh;
   height: fit-content;
   border-bottom: solid 2px var(--color-ferrari);
   width: 100%;
@@ -28,7 +28,7 @@ header ul {
   list-style: none;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-evenly;
   width: 100%;
   padding: 0 10%;
 }
@@ -103,11 +103,13 @@ header img {
 /* MAIN */
 
 main {
+  min-height: 82vh;
   border-top: solid 2px var(--color-ferrari);
   margin-top: 2px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   padding: 0 5%;
   background: var(--tint-williams);
 }
@@ -216,10 +218,13 @@ main .post {
 /* FOOTER */
 
 footer {
+  background: var(--tint-williams);
   border-top: solid 2px var(--color-ferrari);
+  min-height: 5vh;
   height: fit-content;
   padding: 5px 0;
   text-align: center;
+  align-content: center;
 }
 
   /* ALERT - ERROR / SUCCESS */
@@ -246,3 +251,303 @@ footer {
   .alert-box.error {
     background-color: var(--color-ferrari);
   }
+
+  /* CREATE POST / EDIT POST */ 
+
+  #create-post, #edit-post-form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-main);
+    width: 100%;
+    min-height: fit-content;
+    height: 600px;
+    border-radius: var(--border-radius);
+    border: var(--border-fullside);
+    padding: 1% 4%;
+    background: var(--color-williams);
+    justify-content: center;
+  }
+
+  #create-post input, #edit-post-form input {
+    height: 30px;
+  }
+
+  #create-post textarea, #edit-post-form textarea {
+    height: 400px;
+  }
+
+  #create-post button, #edit-post-form button {
+    font-size: 1rem;
+    background: var(--color-williams);
+    border: var(--border-fullside);
+    border-radius: var(--border-radius);
+    padding: 2px 10px;
+    transition: background-color var(--transition-fast), border var(--transition-fast), font-weight var(--transition-fast);
+  }
+
+  #create-post button:hover, #edit-post-form button:hover {
+    cursor: pointer;
+    background: var(--color-mclaren);
+    border: 2px solid var(--color-mclaren);
+    font-weight: bold;
+  }
+
+  /* PROFILE */ 
+
+  .profile-header {
+    position: relative;
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 20px auto;
+  }
+
+  .profile-header .banner {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: var(--border-radius);
+  }
+  
+  .profile-header .avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--color-alpine);
+    position: absolute;
+    bottom: -5%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--tint-williams);
+    z-index: 10;
+  }
+
+  .profile-bio, .profile-email {
+    width: 100%;
+    text-align: center;
+    margin: 10px 0;
+  }
+
+  .profile-body {
+    padding: 10px 0;
+    width: 100%;
+    max-width: 600px;
+    border: var(--border-fullside);
+    border-radius: var(--border-radius);
+    margin-bottom: var(--gap-main);
+  }
+
+  .profile-buttons {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    gap: var(--gap-main);
+    margin-bottom: var(--gap-main);
+  }
+
+  #followers-button, #following-button, #close-popup, #logout {
+    font-size: 1rem;
+    background: var(--color-williams);
+    border: var(--border-fullside);
+    border-radius: var(--border-radius);
+    padding: 2px 10px;
+    transition: background-color var(--transition-fast), border var(--transition-fast), font-weight var(--transition-fast);
+    margin-top: var(--gap-main);
+    margin-bottom: var(--gap-main);
+  }
+
+  #followers-button:hover, #following-button:hover, #close-popup:hover, #logout:hover {
+    cursor: pointer;
+    background: var(--color-mclaren);
+    border: 2px solid var(--color-mclaren);
+    font-weight: bold;
+  }
+
+  #popup-content {
+    width: 600px;
+    min-width: fit-content;
+    background: var(--color-williams);
+    border: var(--border-fullside);
+    border-radius: var(--border-radius);
+    padding: 1% 4%;
+    margin-top: var(--gap-main);
+    margin-bottom: var(--gap-main);
+  }
+
+  #popup-content ul {
+    list-style: circle;
+  }
+
+  #popup-content a {
+    color: var(--color-tire);
+    font-weight: 400;
+    transition: color var(--transition-fast), font-weight var(--transition-fast);
+  }
+
+  #popup-content a:hover {
+    color: var(--color-mclaren);
+    font-weight: bold;    
+  }
+
+  #update-profile {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-main);
+  }
+
+  #update-profile input {
+    width: 600px;
+    min-width: fit-content;
+    height: 20px;
+  }
+
+  #update-profile button {
+    font-size: 1rem;
+    background: var(--color-williams);
+    border: var(--border-fullside);
+    border-radius: var(--border-radius);
+    padding: 2px 10px;
+    transition: background-color var(--transition-fast), border var(--transition-fast), font-weight var(--transition-fast);
+  }
+
+  #update-profile button:hover {
+    cursor: pointer;
+    background: var(--color-mclaren);
+    border: 2px solid var(--color-mclaren);
+    font-weight: bold;
+  }
+
+  #user-feed {
+    width: 600px;
+  }
+
+  #user-feed img {
+    max-width: 600px;
+    border-radius: var(--border-radius);
+    border: var(--border-fullside);
+  }
+
+  /* SINGLE POST VIEW */ 
+
+  .single-post {
+    background-color: var(--color-williams);
+    padding: 1% 4%;
+    margin-top: var(--gap-main);
+    margin-bottom: var(--gap-main);
+    border-radius: var(--border-radius);
+    border: var(--border-fullside);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .single-post-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: var(--gap-main);
+  }
+
+  .single-post a {
+    color: var(--color-tire);
+    font-weight: 400;
+    transition: color var(--transition-fast), font-weight var(--transition-fast);
+  }
+  
+  .single-post a:hover {
+    color: var(--color-mclaren);
+    font-weight: bold;
+  }
+
+  .single-post p {
+    text-align: center;
+    margin: 5px;
+  }
+
+  .single-body-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .single-body-container img {
+    border: var(--border-fullside);
+    border-radius: var(--border-radius);
+    width: fit-content;
+    max-height: 600px;
+  }
+
+  .post-buttons {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .single-post button, .single-editbutton, .back-button {
+    margin: 2%;
+    min-width: fit-content;
+    gap: var(--gap-main);
+    font-size: 1rem;
+    background: var(--color-williams);
+    border: var(--border-fullside);
+    border-radius: var(--border-radius);
+    padding: 2px 10px;
+    transition: background-color var(--transition-fast), border var(--transition-fast), font-weight var(--transition-fast);
+  }
+  
+  .single-post button:hover, .single-editbutton:hover, .back-button:hover {
+    cursor: pointer;
+    background: var(--color-mclaren);
+    border: 2px solid var(--color-mclaren);
+    font-weight: bold;
+    color: var(--color-tire)!important;
+  }
+  
+
+
+
+  .body-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .post-body {
+    width: 100%;
+  }
+  
+  .post a {
+    color: var(--color-tire);
+    font-weight: 400;
+    transition: color var(--transition-fast), font-weight var(--transition-fast);
+  }
+  
+  .post a:hover {
+    color: var(--color-mclaren);
+    font-weight: bold;
+  }
+  
+  .tags {
+    width: 100%;
+    border: solid 2px 0 var(--color-ferrari);
+  }
+  
+  .editbutton {
+    border: var(--border-fullside);
+    padding: 10px;
+    border-radius: var(--border-radius);
+  }
+  
+  #feed img {
+    border-radius: var(--border-radius);
+    border: var(--border-fullside);
+    max-height: 400px;
+    max-width: 400px;
+    height: auto;
+    width: auto;
+    margin-right: var(--gap-main);
+  }
+  
