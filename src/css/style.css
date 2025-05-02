@@ -506,6 +506,83 @@ footer {
   
   /* SEARCH */ 
 
+  #search-form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-main);
+    width: 600px;
+  }
+
+  #search-form input {
+    height: 20px;
+    width: 100%;
+  }
+
+  #search-form button {
+    min-width: fit-content;
+    gap: var(--gap-main);
+    font-size: 1rem;
+    background: var(--color-williams);
+    border: var(--border-fullside);
+    border-radius: var(--border-radius);
+    padding: 2px 10px;
+    transition: background-color var(--transition-fast), border var(--transition-fast), font-weight var(--transition-fast);
+  }
+  
+  #search-form button:hover {
+    cursor: pointer;
+    background: var(--color-mclaren);
+    border: 2px solid var(--color-mclaren);
+    font-weight: bold;
+    color: var(--color-tire);
+  }
+
+  #search-results {
+    padding: 1% 4%;
+  }
+
   /* LOGIN / REGISTER */
 
-  /* 404 */
+  #login-form, #register-form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-main);
+    width: 600px;
+  }
+
+  #login-form div, #register-form div {
+    display: flex;
+    justify-content: space-between;
+    gap: var(--gap-main);
+  }
+
+  #login-form label, #register-form label {
+    width: 20%;
+  }
+
+  #login-form input, #register-form input {
+    height: 20px;
+    width: 80%;
+  }
+
+  #login-form button, #login-form a, #register-form button, #register-form a {
+    text-align: center;
+    color: var(--color-tire);
+    min-width: fit-content;
+    width: 100%;
+    gap: var(--gap-main);
+    font-size: 1rem;
+    background: var(--color-williams);
+    border: var(--border-fullside);
+    border-radius: var(--border-radius);
+    padding: 2px 10px;
+    transition: background-color var(--transition-fast), border var(--transition-fast), font-weight var(--transition-fast);
+  }
+  
+  #login-form button:hover, #login-form a:hover, #register-form button:hover, #register-form a:hover {
+    cursor: pointer;
+    background: var(--color-mclaren);
+    border: 2px solid var(--color-mclaren);
+    font-weight: bold;
+    color: var(--color-tire);
+  }
