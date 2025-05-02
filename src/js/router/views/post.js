@@ -40,10 +40,10 @@ try {
                 <p class="post-buttons">
                     <a class="single-editbutton" href="/post/edit/?id=${post.id}">✎ Edit</a>
                     <button id="delete-post">🗑️ Delete</button>
-                </p>
-            </div>
+                </p>            
             ` : ""}
             <button class="back-button" onclick="window.history.back()">Back</button>
+        </div>
     `;
     // Delete post
     if (post.author.name === localStorage.getItem("profileName")) {
